@@ -1,6 +1,6 @@
 name: "helm-charts/test"
 
-on: pull_request_target
+on: pull_request
 
 jobs:
   lint-test:
@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: "refs/pull/${{ github.event.number }}/merge"
 
       - name: Fetch history
         run: git fetch --prune --unshallow
@@ -45,21 +43,26 @@ jobs:
         uses: helm/kind-action@v1.2.0
         if: steps.list-changed.outputs.changed == 'true'
 
-      # Our Enterprise chart requires some resources created
-      - name: Create Enterprise Test Resources
+      - name: Create Common Resources
         run: |
           kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.5.3/cert-manager.yaml
           sleep 30 # wait for CertManager
           kubectl create namespace test-ns
+        if: steps.list-changed.outputs.changed == 'true'
+
+      # Our Enterprise chart requires some resources created
+      - name: Create Enterprise Test Resources
+        run: |
           kubectl create secret generic influxdb-license --from-literal=INFLUXDB_ENTERPRISE_LICENSE_KEY=${INFLUXDB_ENTERPRISE_LICENSE_KEY} --namespace=test-ns
           kubectl apply -f ./charts/influxdb-enterprise/example-resources.yaml --namespace=test-ns
         env:
           INFLUXDB_ENTERPRISE_LICENSE_KEY: "${{ secrets.INFLUXDB_ENTERPRISE_LICENSE_KEY }}"
-        if: |
-          steps.list-changed.outputs.changed == 'true' &&
-          steps.list-changed.outputs.enterprise == 'true' &&
-          contains(github.event.pull_request.labels.*.name, 'ci:safe')
+        if: steps.list-changed.outputs.changed == 'true' && steps.list-changed.outputs.enterprise == 'true'
 
       - name: Run chart-testing (install)
         run: ct install --namespace=test-ns
+# When https://github.com/helm/chart-testing/issues/212 is fixed, this can be used to set the license key instead of a secret
+#        run: ct install --namespace=test-ns --helm-extra-args="--set license.key=${INFLUXDB_ENTERPRISE_LICENSE_KEY}"
+#        env:
+#          INFLUXDB_ENTERPRISE_LICENSE_KEY: "${{ secrets.INFLUXDB_ENTERPRISE_LICENSE_KEY }}"
         if: steps.list-changed.outputs.changed == 'true'
