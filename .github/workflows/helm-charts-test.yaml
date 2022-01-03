@@ -5,6 +5,10 @@ on: pull_request
 jobs:
   lint-test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # node images versions for helm/kind-action@v1.2.0 => kubernetes-sigs/kind@0.11.1 (https://github.com/kubernetes-sigs/kind/releases/tag/v0.11.1)
+        node_image_version: ["v1.21.1", "v1.22.0"]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -38,6 +42,8 @@ jobs:
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.2.0
+        with:
+          node_image: "kindest/node:${{node_image_version}}"
         if: steps.list-changed.outputs.changed == 'true'
 
       # Our Enterprise chart requires some resources created
@@ -53,7 +59,6 @@ jobs:
 
       - name: Run chart-testing (install)
         run: ct install --namespace=default
-
 # When https://github.com/helm/chart-testing/issues/212 is fixed, this can be used to set the license key instead of using env from secret
 #        run: ct install --namespace=default --helm-extra-args="--set license.key=${INFLUXDB_ENTERPRISE_LICENSE_KEY}"
 #        env:
