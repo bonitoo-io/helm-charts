@@ -43,7 +43,7 @@ jobs:
       - name: Create kind cluster
         uses: helm/kind-action@v1.2.0
         with:
-          node_image: kindest/node:${{ node_image_version }}
+          node_image: kindest/node:${{ matrix.node_image_version }}
         if: steps.list-changed.outputs.changed == 'true'
 
       # Our Enterprise chart requires some resources created
