@@ -1,57 +1,31 @@
 apiVersion: v1
 entries:
-  kapacitor:
-  - apiVersion: v1
-    appVersion: 1.6.3
-    created: "2022-01-27T09:45:24.802013963Z"
-    description: InfluxDB's native data processing engine. It can process both stream
-      and batch data from InfluxDB.
-    digest: 2517a14f3f65e61fd575c1a16d7e489f791d349215509570f7e43553047b2964
-    home: https://www.influxdata.com/time-series-platform/kapacitor/
-    keywords:
-    - kapacitor
-    - stream
-    - etl
-    - timeseries
-    - influxdb
-    - influxdata
-    maintainers:
-    - email: rawkode@influxdata.com
-      name: rawkode
-    - email: giacomo@influxdata.com
-      name: gitirabassi
-    - email: urakiny@gmail.com
-      name: aisuko
-    name: kapacitor
-    sources:
-    - https://github.com/influxdata/kapacitor
-    urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/kapacitor-1.4.2/kapacitor-1.4.2.tgz
-    version: 1.4.2
-  telegraf-ds:
-  - apiVersion: v1
-    appVersion: 1.21.1
-    created: "2022-01-27T09:45:24.921426821Z"
+  telegraf:
+  - apiVersion: v2
+    appVersion: 1.21.2
+    created: "2022-02-03T12:54:19.412592268Z"
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
-    digest: e116c234b0c329675ce4a4a1d0e73240ae3443b5b1db7fbd55f46dcb66349a5b
+    digest: 7221118208ed4587dea1cc4ba71514afa02065e8d58bd8778eafe1039689bb86
     home: https://www.influxdata.com/time-series-platform/telegraf/
+    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
     keywords:
     - telegraf
     - collector
     - timeseries
     - influxdata
+    - influxdb
+    - agent
     maintainers:
     - email: rawkode@influxdata.com
       name: rawkode
     - email: giacomo@influxdata.com
       name: gitirabassi
-    - email: contact@cerenit.fr
-      name: nsteinmetz
-    name: telegraf-ds
+    name: telegraf
     sources:
-    - https://github.com/influxdata/helm-charts/charts/telegraf-ds
+    - https://github.com/influxdata/helm-charts/tree/master/charts/telegraf
+    - https://github.com/influxdata/helm-charts/
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.29/telegraf-ds-1.0.29.tgz
-    version: 1.0.29
-generated: "2022-01-27T09:45:24.921432621Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-1.8.13/telegraf-1.8.13.tgz
+    version: 1.8.13
+generated: "2022-02-03T12:54:19.412632268Z"
