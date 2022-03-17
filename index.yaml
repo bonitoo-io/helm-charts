@@ -1,40 +1,12 @@
 apiVersion: v1
 entries:
-  telegraf:
-  - apiVersion: v2
-    appVersion: 1.21.4
-    created: "2022-03-17T12:11:14.43091819Z"
-    description: Telegraf is an agent written in Go for collecting, processing, aggregating,
-      and writing metrics.
-    digest: 17d7696ad09d8e542ff42c14054031eca48d0fb3ca43e2c85e47a5ec86bf5cf5
-    home: https://www.influxdata.com/time-series-platform/telegraf/
-    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
-    keywords:
-    - telegraf
-    - collector
-    - timeseries
-    - influxdata
-    - influxdb
-    - agent
-    maintainers:
-    - email: rawkode@influxdata.com
-      name: rawkode
-    - email: giacomo@influxdata.com
-      name: gitirabassi
-    name: telegraf
-    sources:
-    - https://github.com/influxdata/helm-charts/tree/master/charts/telegraf
-    - https://github.com/influxdata/helm-charts/
-    urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-1.8.16/telegraf-1.8.16.tgz
-    version: 1.8.16
   telegraf-ds:
   - apiVersion: v1
-    appVersion: 1.21.1
-    created: "2022-03-17T12:11:14.605823517Z"
+    appVersion: 1.21.4
+    created: "2022-03-17T12:42:55.244055398Z"
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
-    digest: a324589bf5529bf5c26287fbbd37330a7750f2e293703f968e58646876aba55a
+    digest: fae5d3c6e2f2c004b1ca7eaf7acab2a431c12fa84219fd4f38e9aee307288834
     home: https://www.influxdata.com/time-series-platform/telegraf/
     keywords:
     - telegraf
@@ -52,6 +24,6 @@ entries:
     sources:
     - https://github.com/influxdata/helm-charts/charts/telegraf-ds
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.30/telegraf-ds-1.0.30.tgz
-    version: 1.0.30
-generated: "2022-03-17T12:11:14.605831517Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.31/telegraf-ds-1.0.31.tgz
+    version: 1.0.31
+generated: "2022-03-17T12:42:55.244064999Z"
