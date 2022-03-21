@@ -1,12 +1,115 @@
 apiVersion: v1
 entries:
+  chronograf:
+  - apiVersion: v1
+    appVersion: 1.9.3
+    created: "2022-03-21T12:25:47.063244166Z"
+    description: Open-source web application written in Go and React.js that provides
+      the tools to visualize your monitoring data and easily create alerting and automation
+      rules.
+    digest: 92ee856aa30d994df2b08b52941536f269bf22162ce44b3c283d52e4e2260eb7
+    home: https://www.influxdata.com/time-series-platform/chronograf/
+    keywords:
+    - chronograf
+    - visualizaion
+    - timeseries
+    - influxdata
+    - influxdb
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    name: chronograf
+    urls:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/chronograf-1.2.4/chronograf-1.2.4.tgz
+    version: 1.2.4
+  influxdb-enterprise:
+  - apiVersion: v1
+    appVersion: 1.9.6
+    created: "2022-03-21T12:25:47.247190584Z"
+    description: Run InfluxDB Enterprise on Kubernetes
+    digest: c1bf9b2c1c3b6ce2b3fb7181d279b282c1d78396d8714b1f98341925c5f4fdbf
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: david@rawkode.com
+      name: rawkode
+    - email: chobbs@influxdata.com
+      name: chobbs
+    name: influxdb-enterprise
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb-enterprise-0.1.18/influxdb-enterprise-0.1.18.tgz
+    version: 0.1.18
+  kapacitor:
+  - apiVersion: v1
+    appVersion: 1.6.3
+    created: "2022-03-21T12:25:47.444346944Z"
+    description: InfluxDB's native data processing engine. It can process both stream
+      and batch data from InfluxDB.
+    digest: 62649b121857155a3f038182c14a629cf90b8ba8bd026cdbae5455eb25ea5694
+    home: https://www.influxdata.com/time-series-platform/kapacitor/
+    keywords:
+    - kapacitor
+    - stream
+    - etl
+    - timeseries
+    - influxdb
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: urakiny@gmail.com
+      name: aisuko
+    name: kapacitor
+    sources:
+    - https://github.com/influxdata/kapacitor
+    urls:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/kapacitor-1.4.5/kapacitor-1.4.5.tgz
+    version: 1.4.5
+  telegraf:
+  - apiVersion: v2
+    appVersion: 1.21.4
+    created: "2022-03-21T12:25:47.646303072Z"
+    description: Telegraf is an agent written in Go for collecting, processing, aggregating,
+      and writing metrics.
+    digest: 714aba9509d678da0263540dad1fd1114d38443382c13b9dbaaa2191a34faa16
+    home: https://www.influxdata.com/time-series-platform/telegraf/
+    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
+    keywords:
+    - telegraf
+    - collector
+    - timeseries
+    - influxdata
+    - influxdb
+    - agent
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    name: telegraf
+    sources:
+    - https://github.com/influxdata/helm-charts/tree/master/charts/telegraf
+    - https://github.com/influxdata/helm-charts/
+    urls:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-1.8.17/telegraf-1.8.17.tgz
+    version: 1.8.17
   telegraf-ds:
   - apiVersion: v1
     appVersion: 1.21.4
-    created: "2022-03-17T12:42:55.244055398Z"
+    created: "2022-03-21T12:25:47.859972058Z"
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
-    digest: fae5d3c6e2f2c004b1ca7eaf7acab2a431c12fa84219fd4f38e9aee307288834
+    digest: 92149840275fef4f385b2f96d181e699238f849f4eb362290d0f00874f14a487
     home: https://www.influxdata.com/time-series-platform/telegraf/
     keywords:
     - telegraf
@@ -24,6 +127,6 @@ entries:
     sources:
     - https://github.com/influxdata/helm-charts/charts/telegraf-ds
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.31/telegraf-ds-1.0.31.tgz
-    version: 1.0.31
-generated: "2022-03-17T12:42:55.244064999Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.32/telegraf-ds-1.0.32.tgz
+    version: 1.0.32
+generated: "2022-03-21T12:25:47.86001216Z"
