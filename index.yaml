@@ -2,12 +2,12 @@ apiVersion: v1
 entries:
   chronograf:
   - apiVersion: v1
-    appVersion: 1.9.3
-    created: "2022-03-21T12:25:47.063244166Z"
+    appVersion: 1.9.4
+    created: "2022-03-30T08:58:02.684263764Z"
     description: Open-source web application written in Go and React.js that provides
       the tools to visualize your monitoring data and easily create alerting and automation
       rules.
-    digest: 92ee856aa30d994df2b08b52941536f269bf22162ce44b3c283d52e4e2260eb7
+    digest: 362bcecc1be4124fd99bd73d95a2c265d7949f527d361ed2c130cc7047e16477
     home: https://www.influxdata.com/time-series-platform/chronograf/
     keywords:
     - chronograf
@@ -22,14 +22,14 @@ entries:
       name: gitirabassi
     name: chronograf
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/chronograf-1.2.4/chronograf-1.2.4.tgz
-    version: 1.2.4
-  influxdb-enterprise:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/chronograf-1.2.5/chronograf-1.2.5.tgz
+    version: 1.2.5
+  influxdb:
   - apiVersion: v1
-    appVersion: 1.9.6
-    created: "2022-03-21T12:25:47.247190584Z"
-    description: Run InfluxDB Enterprise on Kubernetes
-    digest: c1bf9b2c1c3b6ce2b3fb7181d279b282c1d78396d8714b1f98341925c5f4fdbf
+    appVersion: 1.8.10
+    created: "2022-03-30T08:58:02.920492952Z"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 72d8b5ded4c1442800c66638e49e3239168c4e83eb95800d43d90b23304c4807
     home: https://www.influxdata.com/time-series-platform/influxdb/
     keywords:
     - influxdb
@@ -37,23 +37,27 @@ entries:
     - timeseries
     - influxdata
     maintainers:
-    - email: david@rawkode.com
+    - email: rawkode@influxdata.com
       name: rawkode
-    - email: chobbs@influxdata.com
-      name: chobbs
-    name: influxdb-enterprise
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
     sources:
     - https://github.com/influxdata/influxdb
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb-enterprise-0.1.18/influxdb-enterprise-0.1.18.tgz
-    version: 0.1.18
+    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb-4.10.7/influxdb-4.10.7.tgz
+    version: 4.10.7
   kapacitor:
   - apiVersion: v1
-    appVersion: 1.6.3
-    created: "2022-03-21T12:25:47.444346944Z"
+    appVersion: 1.6.4
+    created: "2022-03-30T08:58:03.111409256Z"
     description: InfluxDB's native data processing engine. It can process both stream
       and batch data from InfluxDB.
-    digest: 62649b121857155a3f038182c14a629cf90b8ba8bd026cdbae5455eb25ea5694
+    digest: 674645a72accc29c34ac917c6b60656bbc1b880fdb87060bd6dfd820eeca4430
     home: https://www.influxdata.com/time-series-platform/kapacitor/
     keywords:
     - kapacitor
@@ -73,15 +77,15 @@ entries:
     sources:
     - https://github.com/influxdata/kapacitor
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/kapacitor-1.4.5/kapacitor-1.4.5.tgz
-    version: 1.4.5
+    - https://github.com/bonitoo-io/helm-charts/releases/download/kapacitor-1.4.6/kapacitor-1.4.6.tgz
+    version: 1.4.6
   telegraf:
   - apiVersion: v2
-    appVersion: 1.21.4
-    created: "2022-03-21T12:25:47.646303072Z"
+    appVersion: 1.22.0
+    created: "2022-03-30T08:58:03.320729175Z"
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
-    digest: 714aba9509d678da0263540dad1fd1114d38443382c13b9dbaaa2191a34faa16
+    digest: 0cb16e6abf9e9736b33d90cb94387979e776b08dd97c3f06c900f23ba369885d
     home: https://www.influxdata.com/time-series-platform/telegraf/
     icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
     keywords:
@@ -101,15 +105,15 @@ entries:
     - https://github.com/influxdata/helm-charts/tree/master/charts/telegraf
     - https://github.com/influxdata/helm-charts/
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-1.8.17/telegraf-1.8.17.tgz
-    version: 1.8.17
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-1.8.18/telegraf-1.8.18.tgz
+    version: 1.8.18
   telegraf-ds:
   - apiVersion: v1
-    appVersion: 1.21.4
-    created: "2022-03-21T12:25:47.859972058Z"
+    appVersion: 1.22.0
+    created: "2022-03-30T08:58:03.501229212Z"
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
-    digest: 92149840275fef4f385b2f96d181e699238f849f4eb362290d0f00874f14a487
+    digest: d5b89e2dfa20815966d75a31e7ec4a3c4689ac44b89fd8e211cd28ef7a3c2024
     home: https://www.influxdata.com/time-series-platform/telegraf/
     keywords:
     - telegraf
@@ -127,6 +131,6 @@ entries:
     sources:
     - https://github.com/influxdata/helm-charts/charts/telegraf-ds
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.32/telegraf-ds-1.0.32.tgz
-    version: 1.0.32
-generated: "2022-03-21T12:25:47.86001216Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.33/telegraf-ds-1.0.33.tgz
+    version: 1.0.33
+generated: "2022-03-30T08:58:03.501236512Z"
