@@ -1,29 +1,29 @@
 apiVersion: v1
 entries:
-  telegraf-operator:
-  - apiVersion: v2
-    appVersion: v1.3.6
-    created: "2022-04-04T12:20:43.697866006Z"
-    description: A Helm chart for Kubernetes to deploy telegraf-operator
-    digest: 554f581f802b68e797f6df7a0e7ed272a9d944f32f79dc2e7f90a3bf068775f9
-    home: https://github.com/influxdata/telegraf-operator
+  telegraf-ds:
+  - apiVersion: v1
+    appVersion: 1.22.0
+    created: "2022-04-06T08:25:30.054022801Z"
+    description: Telegraf is an agent written in Go for collecting, processing, aggregating,
+      and writing metrics.
+    digest: 6a536592ef801f8990a51e8fdec33e9d9251f74af8b95755d3912bd01d87fcdf
+    home: https://www.influxdata.com/time-series-platform/telegraf/
     keywords:
     - telegraf
-    - telegraf-operator
-    - sidecar
-    - operator
-    - injector
-    - mutatingwebhook
+    - collector
+    - timeseries
     - influxdata
-    - influxdb
-    kubeVersion: '>= 1.13.0-r0'
     maintainers:
-    - email: wkocjan@influxdata.com
-      name: wojciechka
-    - name: rawkode
-    name: telegraf-operator
-    type: application
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: contact@cerenit.fr
+      name: nsteinmetz
+    name: telegraf-ds
+    sources:
+    - https://github.com/influxdata/helm-charts/charts/telegraf-ds
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-operator-1.3.6/telegraf-operator-1.3.6.tgz
-    version: 1.3.6
-generated: "2022-04-04T12:20:43.697875906Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.0.34/telegraf-ds-1.0.34.tgz
+    version: 1.0.34
+generated: "2022-04-06T08:25:30.054028901Z"
