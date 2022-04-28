@@ -1,30 +1,21 @@
 apiVersion: v1
 entries:
-  influxdb:
-  - apiVersion: v1
-    appVersion: 1.8.10
-    created: "2022-04-22T12:36:42.466920225Z"
-    description: Scalable datastore for metrics, events, and real-time analytics.
-    digest: 823604ebe583823ee6004d34a83dcb223f7bd96cd148ff31c6a1e2c59e32c82c
-    home: https://www.influxdata.com/time-series-platform/influxdb/
-    keywords:
-    - influxdb
-    - database
-    - timeseries
-    - influxdata
+  influxdb2:
+  - apiVersion: v2
+    appVersion: 2.2.0
+    created: "2022-04-28T10:41:47.969888678Z"
+    description: A Helm chart for InfluxDB v2
+    digest: 5f1343cc8fc03ad7a420c159a099278a3a7d312be6fc1fdc16eb6778573e2146
+    home: https://www.influxdata.com/products/influxdb/
+    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
     maintainers:
     - email: rawkode@influxdata.com
       name: rawkode
     - email: giacomo@influxdata.com
       name: gitirabassi
-    - email: urakiny@gmail.com
-      name: aisuko
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: influxdb
-    sources:
-    - https://github.com/influxdata/influxdb
+    name: influxdb2
+    type: application
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb-4.11.0/influxdb-4.11.0.tgz
-    version: 4.11.0
-generated: "2022-04-22T12:36:42.466926725Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb2-2.0.12/influxdb2-2.0.12.tgz
+    version: 2.0.12
+generated: "2022-04-28T10:41:47.969894878Z"
