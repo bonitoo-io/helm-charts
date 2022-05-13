@@ -1,21 +1,79 @@
 apiVersion: v1
 entries:
-  influxdb2:
-  - apiVersion: v2
-    appVersion: 2.2.0
-    created: "2022-04-28T10:41:47.969888678Z"
-    description: A Helm chart for InfluxDB v2
-    digest: 5f1343cc8fc03ad7a420c159a099278a3a7d312be6fc1fdc16eb6778573e2146
-    home: https://www.influxdata.com/products/influxdb/
-    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
+  influxdb:
+  - apiVersion: v1
+    appVersion: 1.8.10
+    created: "2022-05-13T08:15:08.200307332Z"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: fda0b9058a91ae75417c8c6c884753ff4dc641e39658256c08c3d3bf89043dfb
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
     maintainers:
     - email: rawkode@influxdata.com
       name: rawkode
     - email: giacomo@influxdata.com
       name: gitirabassi
-    name: influxdb2
-    type: application
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
     urls:
-    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb2-2.0.12/influxdb2-2.0.12.tgz
-    version: 2.0.12
-generated: "2022-04-28T10:41:47.969894878Z"
+    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb-4.12.0/influxdb-4.12.0.tgz
+    version: 4.12.0
+  influxdb-enterprise:
+  - apiVersion: v1
+    appVersion: 1.9.6
+    created: "2022-05-13T08:15:08.325014857Z"
+    description: Run InfluxDB Enterprise on Kubernetes
+    digest: 323f45054796cb413f6536e52b728dbebb95cc2f7a18a851a2f3fcbadd6084c4
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: david@rawkode.com
+      name: rawkode
+    - email: chobbs@influxdata.com
+      name: chobbs
+    name: influxdb-enterprise
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/influxdb-enterprise-0.1.19/influxdb-enterprise-0.1.19.tgz
+    version: 0.1.19
+  telegraf-ds:
+  - apiVersion: v1
+    appVersion: 1.22.1
+    created: "2022-05-13T08:15:08.453325134Z"
+    description: Telegraf is an agent written in Go for collecting, processing, aggregating,
+      and writing metrics.
+    digest: 08d5cdec417af101fea8b410901102f4b91862bfec8bf36ebe5b21f6f51b9866
+    home: https://www.influxdata.com/time-series-platform/telegraf/
+    keywords:
+    - telegraf
+    - collector
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: contact@cerenit.fr
+      name: nsteinmetz
+    name: telegraf-ds
+    sources:
+    - https://github.com/influxdata/helm-charts/charts/telegraf-ds
+    urls:
+    - https://github.com/bonitoo-io/helm-charts/releases/download/telegraf-ds-1.1.0/telegraf-ds-1.1.0.tgz
+    version: 1.1.0
+generated: "2022-05-13T08:15:08.453330034Z"
